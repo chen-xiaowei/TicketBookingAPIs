@@ -1,0 +1,718 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "TicketBookingAPIs",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v{version}/Booking/Events": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventListApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventListApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventListApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v{version}/Booking/EventDetail": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v{version}/Booking/BookingTickets": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookTicketRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookTicketRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookTicketRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookTicketRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v{version}/Booking/MyBookings": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v{version}/Booking/CancelBooking": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelBookingRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelBookingRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelBookingRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelBookingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v{version}/Booking/Payment": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingPaymentRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingPaymentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingPaymentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingPaymentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v{version}/Connect/Token": {
+      "post": {
+        "tags": [
+          "Connect"
+        ],
+        "operationId": "Token",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessTokenObjectApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessTokenObjectApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessTokenObjectApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v{version}/Connect/Refresh": {
+      "post": {
+        "tags": [
+          "Connect"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccessTokenObject": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "tokenType": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "expiresIn": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccessTokenObjectApiResult": {
+        "type": "object",
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/ApiResultStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AccessTokenObject"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApiResult": {
+        "type": "object",
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/ApiResultStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApiResultStatusCode": {
+        "enum": [
+          200,
+          400,
+          401,
+          403,
+          404,
+          422,
+          500
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "BookTicketRequest": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "eventID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ticketType": {
+            "$ref": "#/components/schemas/TicketType"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookingPaymentRequest": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPrices": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CancelBookingRequest": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Event": {
+        "type": "object",
+        "properties": {
+          "eventID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "eventName": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "ticketAvailability": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventListApiResult": {
+        "type": "object",
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/ApiResultStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Event"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Meta": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemsPerPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefreshTokenRequest": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "default": "",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TicketType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "UserRequest": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "default": "admin",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "default": "123456",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+2024-04-11 05:28:38.0031 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/Booking/Events | action: Events
+2024-04-11 05:31:08.3128 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/Booking/Events | action: Events
+2024-04-11 06:10:12.6091 | ERROR | Hosting failed to start | Autofac.Core.DependencyResolutionException: An exception was thrown while activating Microsoft.AspNetCore.Session.DistributedSessionStore.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Microsoft.AspNetCore.Session.DistributedSessionStore' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.Extensions.Caching.Distributed.IDistributedCache cache' of constructor 'Void .ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Logging.ILoggerFactory)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Extensions.DependencyInjection.KeyedServiceMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest& request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest& request)
+   at Autofac.Core.Container.ResolveComponent(ResolveRequest& request)
+   at Autofac.Core.Container.Autofac.IComponentContext.ResolveComponent(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation) | Microsoft.Extensions.Hosting.Internal.Host | url:  | action: 
+2024-04-11 06:11:20.3244 | ERROR | Hosting failed to start | Autofac.Core.DependencyResolutionException: An exception was thrown while activating Microsoft.AspNetCore.Session.DistributedSessionStore.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Microsoft.AspNetCore.Session.DistributedSessionStore' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.Extensions.Caching.Distributed.IDistributedCache cache' of constructor 'Void .ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Logging.ILoggerFactory)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Extensions.DependencyInjection.KeyedServiceMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest& request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest& request)
+   at Autofac.Core.Container.ResolveComponent(ResolveRequest& request)
+   at Autofac.Core.Container.Autofac.IComponentContext.ResolveComponent(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation) | Microsoft.Extensions.Hosting.Internal.Host | url:  | action: 
+2024-04-11 06:12:31.1052 | ERROR | Hosting failed to start | Autofac.Core.DependencyResolutionException: An exception was thrown while activating Microsoft.AspNetCore.Session.DistributedSessionStore.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'Microsoft.AspNetCore.Session.DistributedSessionStore' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.Extensions.Caching.Distributed.IDistributedCache cache' of constructor 'Void .ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Logging.ILoggerFactory)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Extensions.DependencyInjection.KeyedServiceMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext context)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext context)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest& request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest& request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest& request)
+   at Autofac.Core.Container.ResolveComponent(ResolveRequest& request)
+   at Autofac.Core.Container.Autofac.IComponentContext.ResolveComponent(ResolveRequest& request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation) | Microsoft.Extensions.Hosting.Internal.Host | url:  | action: 
+2024-04-11 06:13:31.1294 | ERROR | An unhandled exception has occurred while executing the request. | System.InvalidOperationException: Session has not been configured for this application or request.
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Session()
+   at Program.<>c.<<<Main>$>b__0_9>d.MoveNext() in D:\dot-netcore\TicketBookingAPIs\TicketBookingAPIs\Program.cs:line 107
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context) | Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware | url: https://localhost/api/Connect/Token | action: Token
+2024-04-11 06:24:26.1125 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/Booking/Events | action: Events
+2024-04-11 06:25:16.8239 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/Booking/Events | action: Events
+2024-04-11 06:48:13.1163 | DEBUG | Query Event Detail by event id. |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/Booking/EventDetail | action: EventDetail
+2024-04-11 06:50:09.6284 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/Booking/Events | action: Events
+2024-04-11 07:01:56.5769 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/Booking/Events | action: Events
+2024-04-11 08:17:36.9408 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/v1/Booking/Events | action: Events
+2024-04-11 09:24:44.6706 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/v1/Booking/Events | action: Events
+2024-04-11 10:01:30.3013 | DEBUG | Query Events |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/v1/Booking/Events | action: Events
+2024-04-11 10:03:05.1317 | DEBUG | Query Event Detail by event id. |  | TicketBookingAPIs.Controllers.BookingController | url: https://localhost/api/v1/Booking/EventDetail | action: EventDetail
